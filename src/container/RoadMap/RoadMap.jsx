@@ -2,21 +2,21 @@ import React from "react";
 import { motion } from "framer-motion";
 import ReactTooltip from "react-tooltip";
 
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from "../../constants";
 import "./RoadMap.scss";
 
 function RoadMap() {
   const skills = [
     { name: "NFT", icon: images.about04 },
-    { name: "NFT", icon: images.about03 },
-    { name: "NFT", icon: images.about04 },
+    { name: "Blokchain", icon: images.about03 },
+    { name: "Web3", icon: images.about04 },
   ];
 
   const experiences = [
-    { year: "2022", works: [{ name: "aa",company:"ali" }] },
-    { year: "2021", works: [{ name: "aa",company:"ali" }] },
-    { year: "2020", works: [{ name: "aa",company:"ali" }] },
+    { year: "2022", works: [{ name: "1", company: "ali", desc: "blabla" }] },
+    { year: "2021", works: [{ name: "2", company: "ali", desc: "blabla" }] },
+    { year: "2020", works: [{ name: "3", company: "ali", desc: "blabla" }] },
   ];
 
   return (
@@ -83,4 +83,8 @@ function RoadMap() {
   );
 }
 
-export default AppWrap(RoadMap, "roadmap");
+export default AppWrap(
+  MotionWrap(RoadMap, "app__roadmap"),
+  "roadmap",
+  "app__whitebg"
+);

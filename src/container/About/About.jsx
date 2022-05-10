@@ -2,14 +2,18 @@ import React, { useState } from "react";
 
 import { motion } from "framer-motion";
 import { images } from "../../constants";
-import { AppWrap } from "../../wrapper";
+import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 
 function About() {
   const [abouts, setAbouts] = useState([
     { title: "NFT", descripton: "Lorem10 Lorem10", imgUrl: images.about01 },
     { title: "WEB3", descripton: "Lorem10 Lorem10", imgUrl: images.about02 },
-    { title: "ETKINLIK", descripton: "Lorem10 Lorem10", imgUrl: images.about03 },
+    {
+      title: "ETKINLIK",
+      descripton: "Lorem10 Lorem10",
+      imgUrl: images.about03,
+    },
     { title: "SEMINER", descripton: "Lorem10 Lorem10", imgUrl: images.about04 },
   ]);
   return (
@@ -37,4 +41,4 @@ function About() {
   );
 }
 
-export default AppWrap(About, "about");
+export default AppWrap(MotionWrap(About, "app__about"), "about", "app__whitebg");

@@ -44,14 +44,17 @@ function Testimonial() {
   ]);
   const [brands, setBrands] = useState([
     {
+      id:"1",
       name: "Yazi",
       imgUrl: images.nft,
     },
     {
+      id:"3",
       name: "Yazi",
       imgUrl: images.blokchain,
     },
     {
+      id:"2",
       name: "Yazi",
       imgUrl: images.web3,
     },
@@ -116,7 +119,7 @@ function Testimonial() {
           <motion.div
             whileInView={{ opacity: [0, 1] }}
             transition={{ duration: 0.5, type: "tween" }}
-            key={brand._id}
+            key={brand.id}
           >
             <img src={brand.imgUrl} alt={brand.name} />
           </motion.div>

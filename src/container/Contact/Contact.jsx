@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import { images } from '../../constants';
-import { AppWrap } from '../../wrapper';
+import { AppWrap,MotionWrap } from '../../wrapper';
 
 import './Contact.scss';
 
@@ -73,4 +73,4 @@ const Contact = () => {
   );
 };
 
-export default AppWrap(Contact,"contact")
+export default AppWrap(MotionWrap(Contact, "app__contact"), "contact", "app__whitebg");

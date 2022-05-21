@@ -17,7 +17,7 @@ function Team() {
       imgUrl: images.about01,
       socialLink: "https://www.linkedin.com/in/mfarslanturk/",
       title: "Selçuk Şen",
-      tags: ["Co-founder", "Mentor"],
+      tags: ["Co-Founder", "Mentör"],
       description: "",
     },
     {
@@ -25,7 +25,7 @@ function Team() {
       imgUrl: images.about01,
       socialLink: "https://www.linkedin.com/in/mfarslanturk/",
       title: "Alpcan Yüksel",
-      tags: ["Co-founder"],
+      tags: ["Co-Founder"],
       description: "",
     },
     {
@@ -33,7 +33,7 @@ function Team() {
       imgUrl: images.about01,
       socialLink: "https://www.linkedin.com/in/mfarslanturk/",
       title: "Fidan Çapkan",
-      tags: ["Co-founder"],
+      tags: ["Co-Founder"],
       description: "",
     },
     {
@@ -41,7 +41,7 @@ function Team() {
       imgUrl: images.about01,
       socialLink: "https://www.linkedin.com/in/mfarslanturk/",
       title: "Aybüke Dikkatli",
-      tags: ["Co-founder"],
+      tags: ["Co-Founder"],
       description: "",
     },
     {
@@ -118,10 +118,10 @@ function Team() {
 
       <div className="app__team-filter">
         {[
-          "Co-founder",
+          "Co-Founder",
           "Management Team Member",
           "Developer",
-          "Mentor",
+          "Mentör",
           "Tümü",
         ].map((item, index) => (
           <div

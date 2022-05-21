@@ -11,7 +11,7 @@ function Nabvar() {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        {/* <img src={images.logo} alt="logo"/> */}
+        {/* <img src={images.logosvg} alt="logo"/> */}
         <h2 className="head-text">
           <span>LOGO</span>
         </h2>

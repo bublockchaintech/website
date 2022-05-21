@@ -35,22 +35,22 @@ const Contact = () => {
   return (
     <>
       <h2 className="head-text">
-        Aramiza <span>Katil</span>
+        Aramıza <span>Katıl</span>
       </h2>
 
       <div className="app__contact-cards">
         <div className="app__contact-card ">
           <img src={images.email} alt="email" />
           <a href="mailto:blokchaintech@info.com" className="p-text">
-            blokchaintech@info.com
+            bublockchaintech@gmail.com
           </a>
         </div>
-        <div className="app__contact-card">
+        {/* <div className="app__contact-card">
           <img src={images.mobile} alt="phone" />
           <a href="tel:444 1 997" className="p-text">
             444 1 997
           </a>
-        </div>
+        </div> */}
       </div>
       {!isFormSubmitted ? (
         <div className="app__contact-form app__flex">
@@ -58,7 +58,7 @@ const Contact = () => {
             <input
               className="p-text"
               type="text"
-              placeholder="Your Name"
+              placeholder="Ad Soyad"
               name="username"
               value={username}
               onChange={handleChangeInput}
@@ -68,7 +68,7 @@ const Contact = () => {
             <input
               className="p-text"
               type="email"
-              placeholder="Your Email"
+              placeholder="E-Posta"
               name="email"
               value={email}
               onChange={handleChangeInput}
@@ -77,14 +77,14 @@ const Contact = () => {
           <div>
             <textarea
               className="p-text"
-              placeholder="Your Message"
+              placeholder="Mesaj"
               value={message}
               name="message"
               onChange={handleChangeInput}
             />
           </div>
           <button type="button" className="p-text" onClick={handleSubmit}>
-            {!loading ? "Send Message" : "Sending..."}
+            {!loading ? "Bize Mesaj Gönderin" : "Gönderiliyor..."}
           </button>
         </div>
       ) : (

@@ -35,7 +35,7 @@ function About() {
   return (
     <>
       <h2 className="head-text">
-        Blokchain Tech Club <span>Hakkinda </span>
+        <span>Hakkımızda </span>
       </h2>
 
       <div className="app__profiles">

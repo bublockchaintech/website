@@ -74,7 +74,7 @@ function RoadMap() {
   return (
     <>
       <h2 className="head-text">
-        Yol <span>Haritasi</span>
+        <span>Hedeflerimiz</span>
       </h2>
 
       <div className="app__skills-container">

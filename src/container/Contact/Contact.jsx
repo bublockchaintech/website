@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-import { images } from '../../constants';
-import { AppWrap,MotionWrap } from '../../wrapper';
+import { images } from "../../constants";
+import { AppWrap, MotionWrap } from "../../wrapper";
 
-import './Contact.scss';
+import "./Contact.scss";
 
 const Contact = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -26,30 +30,49 @@ const Contact = () => {
     //   email: formData.email,
     //   message: formData.message,
     // };
-
   };
 
   return (
     <>
-      <h2 className="head-text">Aramiza <span>Katil</span></h2>
+      <h2 className="head-text">
+        Aramiza <span>Katil</span>
+      </h2>
 
       <div className="app__contact-cards">
         <div className="app__contact-card ">
           <img src={images.email} alt="email" />
-          <a href="mailto:blokchaintech@info.com" className="p-text">blokchaintech@info.com</a>
+          <a href="mailto:blokchaintech@info.com" className="p-text">
+            blokchaintech@info.com
+          </a>
         </div>
         <div className="app__contact-card">
           <img src={images.mobile} alt="phone" />
-          <a href="tel:444 1 997" className="p-text">444 1 997</a>
+          <a href="tel:444 1 997" className="p-text">
+            444 1 997
+          </a>
         </div>
       </div>
       {!isFormSubmitted ? (
         <div className="app__contact-form app__flex">
           <div className="app__flex">
-            <input className="p-text" type="text" placeholder="Your Name" name="username" value={username} onChange={handleChangeInput} />
+            <input
+              className="p-text"
+              type="text"
+              placeholder="Your Name"
+              name="username"
+              value={username}
+              onChange={handleChangeInput}
+            />
           </div>
           <div className="app__flex">
-            <input className="p-text" type="email" placeholder="Your Email" name="email" value={email} onChange={handleChangeInput} />
+            <input
+              className="p-text"
+              type="email"
+              placeholder="Your Email"
+              name="email"
+              value={email}
+              onChange={handleChangeInput}
+            />
           </div>
           <div>
             <textarea
@@ -60,17 +83,21 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>{!loading ? 'Send Message' : 'Sending...'}</button>
+          <button type="button" className="p-text" onClick={handleSubmit}>
+            {!loading ? "Send Message" : "Sending..."}
+          </button>
         </div>
       ) : (
         <div>
-          <h3 className="head-text">
-            Yazi
-          </h3>
+          <h3 className="head-text">Yazi</h3>
         </div>
       )}
     </>
   );
 };
 
-export default AppWrap(MotionWrap(Contact, "app__contact"), "contact", "app__whitebg");
+export default AppWrap(
+  MotionWrap(Contact, "app__contact"),
+  "contact",
+  "app__whitebg"
+);

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import ReactTooltip from "react-tooltip";
+// import ReactTooltip from "react-tooltip";
 
 import { AppWrap, MotionWrap } from "../../wrapper";
 import { images } from "../../constants";
@@ -14,9 +14,61 @@ function RoadMap() {
   ];
 
   const experiences = [
-    { year: "2022", works: [{ name: "1", company: "ali", desc: "blabla" }] },
-    { year: "2021", works: [{ name: "2", company: "ali", desc: "blabla" }] },
-    { year: "2020", works: [{ name: "3", company: "ali", desc: "blabla" }] },
+    {
+      year: "1",
+      works: [
+        {
+          name: "Kuruluş",
+          company:
+            "Beykent Üniversitesi bünyesi içerisinde 2022 yılında kurulduk.",
+          desc: ".",
+        },
+      ],
+    },
+    {
+      year: "2",
+      works: [
+        {
+          name: "Birlikte Gelişmek",
+          company:
+            "Proje ekipleri oluşturarak kendi iç eğitimlerimize ağırlık verirken, sektördeki profesyoneller ile topluluk üyelerimizi bir araya getirerek birlikte büyümeyi amaçlıyoruz.",
+          desc: "blabla",
+        },
+      ],
+    },
+    {
+      year: "3",
+      works: [
+        {
+          name: "Blockchain Alanında Çeşitli Projeler",
+          company:
+            "Blockchain alanında çeşitli projeler yaparak topluluğumuza bu projeleri kazandırmayı hedefliyoruz.",
+          desc: "blabla",
+        },
+      ],
+    },
+    {
+      year: "4",
+      works: [
+        {
+          name: "Merkeziyetsiz Bir Yapıya Ulaşmak",
+          company:
+            "Yönetim biçimimiz ve projelerimizle topluluğumuza hazır olduğunda DAO yapısını entegre etmek ve bir DAO’ya dönüşmeyi amaçlıyoruz.",
+          desc: "blabla",
+        },
+      ],
+    },
+    {
+      year: "5",
+      works: [
+        {
+          name: "Sektöre Danışmanlık Sağlamak",
+          company:
+            "	Birlikte büyüyüp gelişerek zamanla topluluğumuzu sektöre danışman olarak kazandırmak istiyoruz",
+          desc: "blabla",
+        },
+      ],
+    },
   ];
 
   return (
@@ -64,14 +116,14 @@ function RoadMap() {
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>
                     </motion.div>
-                    <ReactTooltip
+                    {/* <ReactTooltip
                       id={work.name}
                       effect="solid"
                       arrowColor="#fff"
                       className="skills-tooltip"
                     >
                       {work.desc}
-                    </ReactTooltip>
+                    </ReactTooltip> */}
                   </>
                 ))}
               </motion.div>

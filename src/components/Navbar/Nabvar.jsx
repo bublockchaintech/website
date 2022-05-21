@@ -5,7 +5,6 @@ import { motion } from "framer-motion";
 import "./Navbar.scss";
 import { images } from "../../constants";
 
-
 function Nabvar() {
   const [toogle, setToogle] = useState(false);
 
@@ -18,10 +17,14 @@ function Nabvar() {
         </h2>
       </div>
       <ul className="app__navbar-links">
-        {["home", "about", "team", "roadmap", "contact"].map((item) => (
-          <li className="app__flex p-text" key={`link-${item}`}>
+        {[{ display: "anasayfa", link: "home" },
+                { display: "hakkimizda", link: "about" },
+                { display: "ekibimiz", link: "team" },
+                { display: "yol haritasi", link: "roadmap" },
+                { display: "iletisim", link: "contact" },].map((item) => (
+          <li className="app__flex p-text" key={`link-${item.link}`}>
             <div />
-            <a href={`#${item}`}>{item}</a>
+            <a href={`#${item.link}`}>{item.display}</a>
           </li>
         ))}
       </ul>
@@ -35,10 +38,16 @@ function Nabvar() {
           >
             <HiX onClick={() => setToogle(false)} />
             <ul>
-              {["home", "about", "team", "roadmap", "contact"].map((item) => (
-                <li key={item}>
-                  <a href={`#${item}`} onClick={() => setToogle(false)}>
-                    {item}
+              {[
+                { display: "anasayfa", link: "home" },
+                { display: "hakkimizda", link: "about" },
+                { display: "ekibimiz", link: "team" },
+                { display: "yol haritasi", link: "roadmap" },
+                { display: "iletisim", link: "contact" },
+              ].map((item) => (
+                <li key={item.link}>
+                  <a href={`#${item.link}`} onClick={() => setToogle(false)}>
+                    {item.display}
                   </a>
                 </li>
               ))}

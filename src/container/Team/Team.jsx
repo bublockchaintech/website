@@ -1,13 +1,12 @@
 import React, { useState } from "react";
 
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+import { AiFillGithub } from "react-icons/ai";
+import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
 import { images } from "../../constants";
 
 import "./Team.scss";
-
-
 
 function Team() {
   const [activeFilter, setActiveFilter] = useState("Tümü");
@@ -18,7 +17,7 @@ function Team() {
       imgUrl: images.about01,
       socialLink: "https://www.linkedin.com/in/mfarslanturk/",
       title: "Selçuk Şen",
-      tags: ["Co-founder","Mentor"],
+      tags: ["Co-founder", "Mentor"],
       description: "",
     },
     {
@@ -163,7 +162,7 @@ function Team() {
                     transition={{ duration: 0.25 }}
                     className="app__flex"
                   >
-                    <AiFillEye />
+                    <FaLinkedinIn />
                   </motion.div>
                 </a>
                 <a href={team.codeLink} target="_blank" rel="noreferrer">

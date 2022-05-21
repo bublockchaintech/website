@@ -1,9 +1,9 @@
-import React from 'react';
-import { motion } from 'framer-motion';
+import React from "react";
+import { motion } from "framer-motion";
 
-import { AppWrap,MotionWrap } from '../../wrapper';
-import { images } from '../../constants';
-import './Header.scss';
+import { AppWrap, MotionWrap } from "../../wrapper";
+import { images } from "../../constants";
+import "./Header.scss";
 
 const scaleVariants = {
   whileInView: {
@@ -11,7 +11,7 @@ const scaleVariants = {
     opacity: [0, 1],
     transition: {
       duration: 1,
-      ease: 'easeInOut',
+      ease: "easeInOut",
     },
   },
 };
@@ -26,12 +26,14 @@ const Header = () => (
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
           <div style={{ marginLeft: 20 }}>
-            <h1 className="head-text">Yazi <span>Yazi</span></h1>
+            <h1 className="head-text">
+              Blokchain <span>Tech Club</span>
+            </h1>
           </div>
         </div>
 
         <div className="tag-cmp app__flex">
-          <p className="p-text">Yazi</p>
+          <p className="p-text">Beykent Üniversitesi</p>
         </div>
       </div>
     </motion.div>
@@ -44,7 +46,7 @@ const Header = () => (
       <img src={images.profile} alt="profile_bg" />
       <motion.img
         whileInView={{ scale: [0, 1] }}
-        transition={{ duration: 1, ease: 'easeInOut' }}
+        transition={{ duration: 1, ease: "easeInOut" }}
         src={images.circle}
         alt="profile_circle"
         className="overlay_circle"
@@ -65,4 +67,8 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(MotionWrap(Header, "app__header"), "home", "app__whitebg");
+export default AppWrap(
+  MotionWrap(Header, "app__header"),
+  "home",
+  "app__whitebg"
+);

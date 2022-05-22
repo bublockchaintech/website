@@ -21,8 +21,9 @@
   align-items: center;
 
   img {
-    margin-left: 2em;
+    margin-left: 4em;
     width: 250px;
+    cursor: pointer;
 
     @media screen and (min-width: 2000px) {
       width: 180px;
@@ -41,6 +42,7 @@
 
   li {
     margin: 0 1rem;
+    font-size: .95em;
     cursor: pointer;
 
     flex-direction: column;

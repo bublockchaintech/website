@@ -11,16 +11,13 @@ function Nabvar() {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        {/* <img src={images.logosvg} alt="logo"/> */}
-        <h2 className="head-text">
-          <span>LOGO</span>
-        </h2>
+        <img src={images.logosvg} alt="logo"/>
       </div>
       <ul className="app__navbar-links">
         {[{ display: "anasayfa", link: "home" },
                 { display: "hakkimizda", link: "about" },
                 { display: "ekibimiz", link: "team" },
-                { display: "yol haritasi", link: "roadmap" },
+                { display: "hedeflerimiz", link: "roadmap" },
                 { display: "iletisim", link: "contact" },].map((item) => (
           <li className="app__flex p-text" key={`link-${item.link}`}>
             <div />
@@ -42,7 +39,7 @@ function Nabvar() {
                 { display: "anasayfa", link: "home" },
                 { display: "hakkimizda", link: "about" },
                 { display: "ekibimiz", link: "team" },
-                { display: "yol haritasi", link: "roadmap" },
+                { display: "hedeflerimiz", link: "roadmap" },
                 { display: "iletisim", link: "contact" },
               ].map((item) => (
                 <li key={item.link}>

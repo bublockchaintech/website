@@ -1,3 +1,4 @@
+import { send } from "emailjs-com";
 import React, { useState } from "react";
 
 import { images } from "../../constants";
@@ -13,24 +14,46 @@ const Contact = () => {
   });
   const [isFormSubmitted, setIsFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [blankField, setBlankField] = useState(false);
 
   const { username, email, message } = formData;
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+    if (!(username === "" || email === "" || message === "")) {
+      setLoading(true);
+
+      send("service_es1y7ur", "template_hiw8xpr", formData, "XdAKsxFytxwHq0-oS")
+        .then((response) => {
+          console.log("SUCCESS!", response.status, response.text);
+          setFormData({username: "", email: "", message: ""});
+        })
+        .catch((err) => {
+          console.error("FAILED!", err);
+        });
+      setLoading(false);
+      setBlankField(false);
+    } else {
+      console.error("FAILED! You must fill all the blank fields.");
+      setBlankField(true);
+    }
+  };
 
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
   };
 
-  const handleSubmit = () => {
-    setLoading(true);
+  // const handleSubmit = () => {
+  //   setLoading(true);
 
-    // const contact = {
-    //   _type: 'contact',
-    //   name: formData.username,
-    //   email: formData.email,
-    //   message: formData.message,
-    // };
-  };
+  //   // const contact = {
+  //   //   _type: 'contact',
+  //   //   name: formData.username,
+  //   //   email: formData.email,
+  //   //   message: formData.message,
+  //   // };
+  // };
 
   return (
     <>
@@ -53,7 +76,7 @@ const Contact = () => {
         </div> */}
       </div>
       {!isFormSubmitted ? (
-        <div className="app__contact-form app__flex">
+        <form onSubmit={sendEmail} className="app__contact-form app__flex">
           <div className="app__flex">
             <input
               className="p-text"
@@ -83,10 +106,11 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <button type="button" className="p-text" onClick={handleSubmit}>
+          <p style={{"color": "red"}}>{blankField ? ("Tüm alanları doldurun"): ""}</p>
+          <button type="submit" className="p-text">
             {!loading ? "Bize Mesaj Gönderin" : "Gönderiliyor..."}
           </button>
-        </div>
+        </form>
       ) : (
         <div>
           <h3 className="head-text">Yazi</h3>

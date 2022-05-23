@@ -79,7 +79,9 @@ function RoadMap() {
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          {skills.map((skill) => (
+          <img src={images.nftWebSaydam} alt="profile_bg" />
+
+          {/* {skills.map((skill) => (
             <motion.div
               whileInView={{ opacity: [0, 1] }}
               transition={{ duration: 0.5 }}
@@ -94,7 +96,7 @@ function RoadMap() {
               </div>
               <p className="p-text">{skill.name}</p>
             </motion.div>
-          ))}
+          ))} */}
         </motion.div>
         <div className="app__skills-exp">
           {experiences.map((experience) => (

@@ -17,6 +17,8 @@ import nft from "../assets/nft.png";
 import blokchain from "../assets/blokchain.png";
 import web3 from "../assets/web3.0.png";
 
+import nftWebSaydam from "../assets/NFTWEBs.gif";
+
 export default {
   nft,
   blokchain,
@@ -30,5 +32,6 @@ export default {
   profile,
   circle,
   logo,
-  logosvg
+  logosvg,
+  nftWebSaydam,
 };

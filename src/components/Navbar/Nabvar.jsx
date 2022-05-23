@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 
 import "./Navbar.scss";
 import { images } from "../../constants";
+import linkHelper from "../../helper/helper";
 
 function Nabvar() {
   const [toogle, setToogle] = useState(false);
@@ -11,17 +12,25 @@ function Nabvar() {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={images.logosvg} alt="logo"/>
+        <img src={images.logosvg} alt="logo" />
       </div>
       <ul className="app__navbar-links">
-        {[{ display: "anasayfa", link: "home" },
-                { display: "hakkimizda", link: "about" },
-                { display: "ekibimiz", link: "team" },
-                { display: "hedeflerimiz", link: "roadmap" },
-                { display: "iletisim", link: "contact" },].map((item) => (
+        {[
+          { display: "anasayfa", link: "home" },
+          { display: "hakkimizda", link: "about" },
+          { display: "ekibimiz", link: "team" },
+          { display: "hedeflerimiz", link: "roadmap" },
+          { display: "iletisim", link: "contact" },
+        ].map((item) => (
           <li className="app__flex p-text" key={`link-${item.link}`}>
             <div />
-            <a href={`#${item.link}`}>{item.display}</a>
+            <button
+              onClick={() => {
+                linkHelper.linkHelperForNavigationBar(item);
+              }}
+            >
+              {item.display}
+            </button>
           </li>
         ))}
       </ul>
@@ -43,9 +52,14 @@ function Nabvar() {
                 { display: "iletisim", link: "contact" },
               ].map((item) => (
                 <li key={item.link}>
-                  <a href={`#${item.link}`} onClick={() => setToogle(false)}>
+                  <button
+                    onClick={() => {
+                      setToogle(false);
+                      linkHelper.linkHelperForNavigationBar(item);
+                    }}
+                  >
                     {item.display}
-                  </a>
+                  </button>
                 </li>
               ))}
             </ul>

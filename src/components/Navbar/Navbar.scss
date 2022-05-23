@@ -58,7 +58,7 @@
       transition: all 0.3s ease-in-out;
     }
 
-    a {
+    button {
       color: var(--gray-color);
       text-decoration: none;
       flex-direction: column;
@@ -67,6 +67,9 @@
       font-weight: 500;
 
       transition: all 0.3s ease-in-out;
+      border: none;
+      background-color: rgba(255, 255, 255, 0.25);
+      cursor: pointer;
 
       &:hover {
         color: var(--secondary-color);
@@ -147,12 +150,15 @@
     li {
       margin: 1rem;
 
-      a {
+      button {
         color: var(--gray-color);
         text-decoration: none;
         font-size: 1rem;
         text-transform: uppercase;
         font-weight: 500;
+        border: none;
+        background-color: rgba(255, 255, 255, 0.25);
+        cursor: pointer;
 
         transition: all 0.3s ease-in-out;
 

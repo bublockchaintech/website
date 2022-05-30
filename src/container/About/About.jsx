@@ -11,25 +11,25 @@ function About() {
       title: "Vizyon",
       descripton:
         "Değişen teknoloji trendlerine uyum sağlamak, kendisini blockchain mühendisi olarak yetiştirebilmesine yardımcı teknik eğitim ve etkinlik düzenlemek, henüz öğrenciyken özel sektöre projeler yapabilen seviyeye erişmek ,proje bazlı çalışmalar yapmak ve kendi kendini yönetebilen DAO organizasyon yapısına dönüşmeyi istiyoruz.",
-      imgUrl: images.about01,
+      imgUrl: images.vision,
     },
     {
       title: "Misyon",
       descripton:
         "Blockchain teknolojisinin yakın ve gelecek tarihlerde hayatımızı çoğu noktada değiştireceğine inanmaktayız. Bu inanç doğrultusunda isteyen her arkadaşımızın Yeni Dünya’da blockchain mühendisi olabilmesi için her türlü katkıyı sağlamayı hedeflemekteyiz.",
-      imgUrl: images.about02,
+      imgUrl: images.mission,
     },
     {
       title: "Proje",
       descripton:
         "Kendi bünyemizde oluşturduğumuz proje ekipleri ile, blockchain ve nft alanında çeşitli projeler geliştiriyor ve proje ekiplerimizi sektöre danışman statüsünde kazandırmayı hedefliyoruz.",
-      imgUrl: images.about03,
+      imgUrl: images.project,
     },
     {
       title: "Etkinlik",
       descripton:
         "Etkinliklerimizde topluluk olarak kendimizi blockchain alanında geliştirmeyi ve ulaşabildiğimiz kadar çok insana bilgiyi yaymayı amaçlıyoruz. Bu amaç doğrultusunda, online ve yüzyüze tecrübe aktarımı, eğitim, zirve ve seminerler düzenliyoruz.",
-      imgUrl: images.about04,
+      imgUrl: images.activity,
     },
   ]);
   return (
@@ -42,7 +42,7 @@ function About() {
         {abouts.map((about, index) => (
           <motion.div
             whileInView={{ opacity: 1 }}
-            whileHover={{ scale: 1.1 }}
+            whileHover={{ scale: 1.3 }}
             transition={{ duration: 0.5, type: "tween" }}
             className="app__profile-item"
             key={about.title + index}

@@ -19,6 +19,11 @@ import web3 from "../assets/web3.0.png";
 
 import nftWebSaydam from "../assets/NFTWEBs.gif";
 
+import vision from "../assets/vision.png"
+import mission from "../assets/mission.png"
+import project from "../assets/project.png"
+import activity from "../assets/activity.png"
+
 export default {
   nft,
   blokchain,
@@ -34,4 +39,8 @@ export default {
   logo,
   logosvg,
   nftWebSaydam,
+  vision,
+  mission,
+  project,
+  activity
 };

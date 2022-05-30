@@ -25,7 +25,7 @@ const Header = () => (
     >
       <div className="app__header-badge">
         <div className="badge-cmp app__flex">
-          <div style={{ marginLeft: 20 }}>
+          <div style={{ marginLeft: 10 }}>
             <h1 className="head-text">
               Blokchain <span>Tech Club</span>
             </h1>

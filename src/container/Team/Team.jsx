@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-import { AiFillGithub } from "react-icons/ai";
 import { FaLinkedinIn } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { AppWrap } from "../../wrapper";
@@ -15,7 +14,7 @@ function Team() {
     {
       name: "Selçuk Şen",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/selcuksen/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=tr",
       title: "Selçuk Şen",
       tags: ["Co-Founder", "Mentör"],
       description: "",
@@ -23,7 +22,7 @@ function Team() {
     {
       name: "Alpcan Yüksel",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/alpcan-y%C3%BCksel-82baa41a3/?originalSubdomain=tr",
       title: "Alpcan Yüksel",
       tags: ["Co-Founder"],
       description: "",
@@ -31,7 +30,7 @@ function Team() {
     {
       name: "Fidan Çapkan",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/fidan-%C3%A7apkan-b762a6177/?originalSubdomain=tr",
       title: "Fidan Çapkan",
       tags: ["Co-Founder"],
       description: "",
@@ -39,7 +38,7 @@ function Team() {
     {
       name: "Aybüke Dikkatli",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/ayb%C3%BCkedikkatli/",
       title: "Aybüke Dikkatli",
       tags: ["Co-Founder"],
       description: "",
@@ -47,7 +46,7 @@ function Team() {
     {
       name: "Beyza Karaarslan",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/beyza-karaarslan-2b0804238/",
       title: "Beyza Karaarslan",
       tags: ["Management Team Member"],
       description: "",
@@ -55,7 +54,7 @@ function Team() {
     {
       name: "Gökşen Ayar",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/g%C3%B6k%C5%9Fen-ayar-423528210/?originalSubdomain=tr",
       title: "Gökşen Ayar",
       tags: ["Management Team Member"],
       description: "",
@@ -63,7 +62,7 @@ function Team() {
     {
       name: "Özmen Evgincan",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/%C3%B6zmen-evgincan-4432b1149",
       title: "Özmen Evgincan",
       tags: ["Management Team Member"],
       description: "",
@@ -79,7 +78,7 @@ function Team() {
     {
       name: "Eyüphan Kaya",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/eyphn-ky/?originalSubdomain=tr",
       title: "Eyüphan Kaya",
       tags: ["Developer"],
       description: "",
@@ -87,7 +86,7 @@ function Team() {
     {
       name: "Eren Yusuf Duran",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/mfarslanturk/",
+      socialLink: "https://www.linkedin.com/in/erenyusufduran/",
       title: "Eren Yusuf Duran",
       tags: ["Developer"],
       description: "",
@@ -163,16 +162,6 @@ function Team() {
                     className="app__flex"
                   >
                     <FaLinkedinIn />
-                  </motion.div>
-                </a>
-                <a href={team.codeLink} target="_blank" rel="noreferrer">
-                  <motion.div
-                    whileInView={{ scale: [0, 1] }}
-                    whileHover={{ scale: [1, 0.9] }}
-                    transition={{ duration: 0.25 }}
-                    className="app__flex"
-                  >
-                    <AiFillGithub />
                   </motion.div>
                 </a>
               </motion.div>

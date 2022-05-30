@@ -15,9 +15,10 @@ function RoadMap() {
 
   const experiences = [
     {
-      year: "1",
+      id: 1,
       works: [
         {
+          id: 11,
           name: "Kuruluş",
           company:
             "Beykent Üniversitesi bünyesi içerisinde 2022 yılında kurulduk.",
@@ -26,9 +27,10 @@ function RoadMap() {
       ],
     },
     {
-      year: "2",
+      id: 2,
       works: [
         {
+          id: 12,
           name: "Birlikte Gelişmek",
           company:
             "Proje ekipleri oluşturarak kendi iç eğitimlerimize ağırlık verirken, sektördeki profesyoneller ile topluluk üyelerimizi bir araya getirerek birlikte büyümeyi amaçlıyoruz.",
@@ -37,9 +39,10 @@ function RoadMap() {
       ],
     },
     {
-      year: "3",
+      id: 3,
       works: [
         {
+          id: 13,
           name: "Blockchain Alanında Çeşitli Projeler",
           company:
             "Blockchain alanında çeşitli projeler yaparak topluluğumuza bu projeleri kazandırmayı hedefliyoruz.",
@@ -48,9 +51,10 @@ function RoadMap() {
       ],
     },
     {
-      year: "4",
+      id: 4,
       works: [
         {
+          id: 14,
           name: "Merkeziyetsiz Bir Yapıya Ulaşmak",
           company:
             "Yönetim biçimimiz ve projelerimizle topluluğumuza hazır olduğunda DAO yapısını entegre etmek ve bir DAO’ya dönüşmeyi amaçlıyoruz.",
@@ -59,9 +63,10 @@ function RoadMap() {
       ],
     },
     {
-      year: "5",
+      id: 5,
       works: [
         {
+          id: 15,
           name: "Sektöre Danışmanlık Sağlamak",
           company:
             "	Birlikte büyüyüp gelişerek zamanla topluluğumuzu sektöre danışman olarak kazandırmak istiyoruz",
@@ -100,20 +105,20 @@ function RoadMap() {
         </motion.div>
         <div className="app__skills-exp">
           {experiences.map((experience) => (
-            <motion.div className="app__skills-exp-item" key={experience.year}>
+            <motion.div className="app__skills-exp-item" key={experience.id}>
               <div className="app__skills-exp-year">
-                <p className="bold-text">{experience.year}</p>
+                <p className="bold-text">{experience.id}</p>
               </div>
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
-                    <motion.div
+                    <motion.div 
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
                       data-tip
                       data-for={work.name}
-                      key={work.name}
+                      key={work.id}
                     >
                       <h4 className="bold-text">{work.name}</h4>
                       <p className="p-text">{work.company}</p>

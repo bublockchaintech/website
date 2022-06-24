@@ -26,6 +26,13 @@
 
   margin-right: 5rem;
 
+  img {
+    width: 100%;
+    object-fit: contain;
+    z-index: 100;
+    margin: auto;
+  }
+
   @media screen and (max-width: 900px) {
     margin-right: 0;
     justify-content: center;

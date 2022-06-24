@@ -60,6 +60,10 @@
     cursor: pointer;
     transition: all 0.3s ease;
 
+    p {
+      font-size: 0.8rem;
+    }
+
     &:hover {
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.2);
     }

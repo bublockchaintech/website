@@ -20,7 +20,7 @@ const SocialMedia = () => {
       </div>
       <div>
         <a
-          href="https://medium.com/@bublockchaintech"
+          href="https://medium.com/@blockchaintechclub"
           target="_blank"
           rel="noreferrer"
         >

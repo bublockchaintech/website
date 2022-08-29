@@ -19,10 +19,10 @@ import web3 from "../assets/web3.0.png";
 
 import nftWebSaydam from "../assets/NFTWEBs.gif";
 
-import vision from "../assets/vision.png"
-import mission from "../assets/mission.png"
-import project from "../assets/project.png"
-import activity from "../assets/activity.png"
+import vizyon from "../assets/vizyon.jpg";
+import misyon from "../assets/misyon.jpg";
+import proje from "../assets/proje.jpg";
+import activity from "../assets/activity.png";
 
 export default {
   nft,
@@ -39,8 +39,8 @@ export default {
   logo,
   logosvg,
   nftWebSaydam,
-  vision,
-  mission,
-  project,
-  activity
+  vizyon,
+  misyon,
+  proje,
+  activity,
 };

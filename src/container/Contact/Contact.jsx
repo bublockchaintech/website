@@ -1,5 +1,5 @@
 import { send } from "emailjs-com";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import { images } from "../../constants";
 import { AppWrap, MotionWrap } from "../../wrapper";
@@ -12,11 +12,17 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [isFormSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
   const [blankField, setBlankField] = useState(false);
 
   const { username, email, message } = formData;
+
+  useEffect(() => {
+    if (!(username === "" && email === "" && message === "")) {
+      setBlankField(false);
+    }
+  }, [formData]);
 
   const sendEmail = (e) => {
     e.preventDefault();

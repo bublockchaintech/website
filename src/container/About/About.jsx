@@ -11,19 +11,19 @@ function About() {
       title: "Vizyon",
       descripton:
         "Değişen teknoloji trendlerine uyum sağlamak, kendisini blockchain mühendisi olarak yetiştirebilmesine yardımcı teknik eğitim ve etkinlik düzenlemek, henüz öğrenciyken özel sektöre projeler yapabilen seviyeye erişmek ,proje bazlı çalışmalar yapmak ve kendi kendini yönetebilen DAO organizasyon yapısına dönüşmeyi istiyoruz.",
-      imgUrl: images.vision,
+      imgUrl: images.vizyon,
     },
     {
       title: "Misyon",
       descripton:
         "Blockchain teknolojisinin yakın ve gelecek tarihlerde hayatımızı çoğu noktada değiştireceğine inanmaktayız. Bu inanç doğrultusunda isteyen her arkadaşımızın Yeni Dünya’da blockchain mühendisi olabilmesi için her türlü katkıyı sağlamayı hedeflemekteyiz.",
-      imgUrl: images.mission,
+      imgUrl: images.misyon,
     },
     {
       title: "Proje",
       descripton:
         "Kendi bünyemizde oluşturduğumuz proje ekipleri ile, blockchain ve nft alanında çeşitli projeler geliştiriyor ve proje ekiplerimizi sektöre danışman statüsünde kazandırmayı hedefliyoruz.",
-      imgUrl: images.project,
+      imgUrl: images.proje,
     },
     {
       title: "Etkinlik",

@@ -24,6 +24,13 @@ import misyon from "../assets/misyon.jpg";
 import proje from "../assets/proje.jpg";
 import activity from "../assets/activity.png";
 
+import codefictionPng from "../assets/codefiction.png";
+import colinsPng from "../assets/colins.png";
+import etkinkampusPng from "../assets/etkinkampus.png";
+import fullseppPng from "../assets/fullsepp.png";
+import kriptomedaPng from "../assets/kriptomeda.png";
+import patikaDevPng from "../assets/patika.dev.png";
+
 export default {
   nft,
   blokchain,
@@ -43,4 +50,10 @@ export default {
   misyon,
   proje,
   activity,
+  patikaDevPng,
+  kriptomedaPng,
+  fullseppPng,
+  etkinkampusPng,
+  colinsPng,
+  codefictionPng,
 };

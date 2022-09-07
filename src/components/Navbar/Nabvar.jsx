@@ -20,6 +20,7 @@ function Nabvar() {
           { display: "hakkimizda", link: "about" },
           { display: "ekibimiz", link: "team" },
           { display: "hedeflerimiz", link: "roadmap" },
+          { display: "partnerliklerimiz", link: "sponsors" },
           { display: "iletisim", link: "contact" },
         ].map((item) => (
           <li className="app__flex p-text" key={`link-${item.link}`}>
@@ -49,6 +50,7 @@ function Nabvar() {
                 { display: "hakkimizda", link: "about" },
                 { display: "ekibimiz", link: "team" },
                 { display: "hedeflerimiz", link: "roadmap" },
+                { display: "partnerliklerimiz", link: "sponsors" },
                 { display: "iletisim", link: "contact" },
               ].map((item) => (
                 <li key={item.link}>

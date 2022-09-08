@@ -17,39 +17,28 @@ const scaleVariants = {
 };
 
 const Sponsors = () => (
-  <>
-    <h2 className="head-text">
-      <span>Partnerliklerimiz</span>
-    </h2>
-    <>
-      <div className="app__header app__flex">
-        <motion.div
-          variants={scaleVariants}
-          whileInView={scaleVariants.whileInView}
-          className="app__header-circles-v2"
-        >
+  <div>
+    <div style={{ display: "block" }}>
+      <h2 className="head-text">
+        <span style={{ display: "block" }}>Partnerliklerimiz</span>
+      </h2>
+    </div>
+      <div className="app__header__sponsors app__flex">
+        <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className="app__header-circles-v2">
           {[images.codefictionPng, images.colinsPng].map((circle, index) => (
             <div className="circle-cmp app__flex" key={`circle-${index}`}>
               <img src={circle} alt="profile_bg" />
             </div>
           ))}
         </motion.div>
-        <motion.div
-          variants={scaleVariants}
-          whileInView={scaleVariants.whileInView}
-          className="app__header-circles-v2"
-        >
+        <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className="app__header-circles-v2">
           {[images.patikaDevPng, images.etkinkampusPng].map((circle, index) => (
             <div className="circle-cmp app__flex" key={`circle-${index}`}>
               <img src={circle} alt="profile_bg" />
             </div>
           ))}
         </motion.div>
-        <motion.div
-          variants={scaleVariants}
-          whileInView={scaleVariants.whileInView}
-          className="app__header-circles-v2"
-        >
+        <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className="app__header-circles-v2">
           {[images.fullseppPng, images.kriptomedaPng].map((circle, index) => (
             <div className="circle-cmp app__flex" key={`circle-${index}`}>
               <img src={circle} alt="profile_bg" />
@@ -57,12 +46,7 @@ const Sponsors = () => (
           ))}
         </motion.div>
       </div>
-    </>
-  </>
+  </div>
 );
 
-export default AppWrap(
-  MotionWrap(Sponsors, "app__header"),
-  "sponsors",
-  "app__whitebg"
-);
+export default AppWrap(MotionWrap(Sponsors, "app__header"), "sponsors", "app__whitebg");

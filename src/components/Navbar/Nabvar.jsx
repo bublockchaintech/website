@@ -51,6 +51,7 @@ function Nabvar() {
                 { display: "ekibimiz", link: "team" },
                 { display: "hedeflerimiz", link: "roadmap" },
                 { display: "partnerliklerimiz", link: "sponsors" },
+                { display: "duyurular", link: "announcements" },
                 { display: "iletisim", link: "contact" },
               ].map((item) => (
                 <li key={item.link}>

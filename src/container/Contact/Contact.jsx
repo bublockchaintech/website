@@ -2,7 +2,7 @@ import { send } from "emailjs-com";
 import React, { useState, useEffect } from "react";
 
 import { images } from "../../constants";
-import { AppWrap, MotionWrap } from "../../wrapper";
+import { AppWrapV2, MotionWrap } from "../../wrapper";
 
 import "./Contact.scss";
 
@@ -126,7 +126,7 @@ const Contact = () => {
   );
 };
 
-export default AppWrap(
+export default AppWrapV2(
   MotionWrap(Contact, "app__contact"),
   "contact",
   "app__whitebg"

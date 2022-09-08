@@ -7,11 +7,11 @@ import { images } from "../../constants";
 import "./RoadMap.scss";
 
 function RoadMap() {
-  const skills = [
-    { name: "NFT", icon: images.about04 },
-    { name: "Blokchain", icon: images.about03 },
-    { name: "Web3", icon: images.about04 },
-  ];
+  // const skills = [
+  //   { name: "NFT", icon: images.about04 },
+  //   { name: "Blokchain", icon: images.about03 },
+  //   { name: "Web3", icon: images.about04 },
+  // ];
 
   const experiences = [
     {

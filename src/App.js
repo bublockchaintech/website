@@ -1,6 +1,15 @@
 import React from "react";
 
-import { About, Contact, Header, RoadMap, Testimonial, Team, Sponsors } from "./container";
+import {
+  About,
+  Contact,
+  Header,
+  RoadMap,
+  Testimonial,
+  Team,
+  Sponsors,
+  Announcements,
+} from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
 
@@ -14,6 +23,7 @@ const App = () => {
       <RoadMap />
       <Testimonial />
       <Sponsors />
+      <Announcements />
       <Contact />
     </div>
   );

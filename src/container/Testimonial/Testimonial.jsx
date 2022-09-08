@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { HiChevronLeft, HiChevronRight } from "react-icons/hi";
 import { motion } from "framer-motion";
 
@@ -8,7 +8,7 @@ import "./Testimonial.scss";
 
 function Testimonial() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [testimonials, setTestimonials] = useState([
+  const [testimonials] = useState([
     {
       name: "Blockchain",
       company: "",
@@ -38,7 +38,7 @@ function Testimonial() {
         "Web 3.0 internetin decentralized yani merkeziyetsiz ve P2P (Eşten Eşe) olacak şekilde kullanılabilen, tamamen blok zincir destekli ve kişiselleştirilmiş halini ifade ediyor. Şu anda kullanılan internet hayattaki şeyleri hatırı sayılır derecede değiştirmiş olsa da merkezcilik, gözetlenme, istilacı reklamcılık gibi birçok dezavantajları vardır. Web 3.0 ile birlikte yeni internet dönemi açık, akıllı ve merkeziyetsiz bir internet olmayı hedeflemektedir. Bu sayede veri, birbirine bağlanmış olan yollardan merkeziyetsiz bir şekilde ulaştırılacaktır.",
     },
   ]);
-  const [brands, setBrands] = useState([
+  const [brands] = useState([
     {
       id: "1",
       name: "Yazi",
@@ -65,10 +65,7 @@ function Testimonial() {
       {testimonials.length && (
         <>
           <div className="app__testimonial-item app__flex">
-            <img
-              src={testimonials[currentIndex].imgUrl}
-              alt={testimonials[currentIndex].name}
-            />
+            <img src={testimonials[currentIndex].imgUrl} alt={testimonials[currentIndex].name} />
             <div className="app__testimonial-content">
               <h4 className="bold-text">{testimonials[currentIndex].name}</h4>
               <p className="p-text">{testimonials[currentIndex].feedback}</p>
@@ -81,26 +78,14 @@ function Testimonial() {
           <div className="app__testimonial-btns app__flex">
             <div
               className="app__flex"
-              onClick={() =>
-                handleClick(
-                  currentIndex === 0
-                    ? testimonials.length - 1
-                    : currentIndex - 1
-                )
-              }
+              onClick={() => handleClick(currentIndex === 0 ? testimonials.length - 1 : currentIndex - 1)}
             >
               <HiChevronLeft />
             </div>
 
             <div
               className="app__flex"
-              onClick={() =>
-                handleClick(
-                  currentIndex === testimonials.length - 1
-                    ? 0
-                    : currentIndex + 1
-                )
-              }
+              onClick={() => handleClick(currentIndex === testimonials.length - 1 ? 0 : currentIndex + 1)}
             >
               <HiChevronRight />
             </div>
@@ -110,11 +95,7 @@ function Testimonial() {
 
       <div className="app__testimonial-brands app__flex">
         {brands.map((brand) => (
-          <motion.div
-            whileInView={{ opacity: [0, 1] }}
-            transition={{ duration: 0.5, type: "tween" }}
-            key={brand.id}
-          >
+          <motion.div whileInView={{ opacity: [0, 1] }} transition={{ duration: 0.5, type: "tween" }} key={brand.id}>
             <img src={brand.imgUrl} alt={brand.name} />
           </motion.div>
         ))}
@@ -123,4 +104,4 @@ function Testimonial() {
   );
 }
 
-export default AppWrap(Testimonial);
+export default AppWrap(Testimonial, "testimotional");

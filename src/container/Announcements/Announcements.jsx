@@ -1,10 +1,12 @@
 import React from "react";
 import { motion } from "framer-motion";
-
+import { Link, useLocation } from "react-router-dom";
 import { AppWrap } from "../../wrapper";
 import "./Announcements.scss";
 
 function Announcements() {
+  const { pathname } = useLocation();
+  console.log(pathname);
   const announcements = [
     {
       id: 1,
@@ -67,10 +69,7 @@ function Announcements() {
       <div className="app__announcements-container">
         <div className="app__announcements-exp">
           {announcements.map((announcement) => (
-            <motion.div
-              className="app__announcements-exp-item"
-              key={announcement.id}
-            >
+            <motion.div className="app__announcements-exp-item" key={announcement.id}>
               <div className="app__announcements-exp-year">
                 <p className="bold-text">{announcement.date}</p>
               </div>
@@ -100,7 +99,13 @@ function Announcements() {
               </motion.div>
             </motion.div>
           ))}
-          <button className="app_announcements-button">TÜM DUYURULARI GÖRÜNTÜLE</button>
+          {pathname === "/" ? (
+            <Link to="announcements" className="app_announcements-button">
+              TÜM DUYURULARI GÖRÜNTÜLE
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
       </div>
     </>

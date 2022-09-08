@@ -1,22 +1,13 @@
 import React from "react";
 
-import {
-  About,
-  Contact,
-  Header,
-  RoadMap,
-  Testimonial,
-  Team,
-  Sponsors,
-  Announcements,
-} from "./container";
+import { About, Contact, Header, RoadMap, Testimonial, Team, Sponsors, Announcements } from "./container";
 import { Navbar } from "./components";
 import "./App.scss";
 
-const App = () => {
+const App = ({ from }) => {
   return (
     <div className="app">
-      <Navbar />
+      <Navbar from={from} />
       <Header />
       <About />
       <Team />

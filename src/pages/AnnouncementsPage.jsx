@@ -6,6 +6,7 @@ const AnnouncementsPage = ({from}) => {
   return (
     <div>
       <Navbar from={from} />
+      <br/><br/><br/><br/>
       <Announcements/>
     </div>
   );

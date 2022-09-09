@@ -14,7 +14,7 @@ root.render(
   <BrowserRouter>
     <Routes>
       <Route index element={<App from={paginationArr[0]} />} />
-      <Route path="announcements" element={<AnnouncementsPage from={paginationArr[1]} />} />
+      <Route path="duyurular" element={<AnnouncementsPage from={paginationArr[1]} />} />
     </Routes>
   </BrowserRouter>
 );

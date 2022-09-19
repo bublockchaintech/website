@@ -39,7 +39,7 @@ const Sponsors = () => (
           ))}
         </motion.div>
         <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className="app__header-circles-v2">
-          {[images.fullseppPng, images.kriptomedaPng].map((circle, index) => (
+          {[images.fullseppPng, images.uniVeChainPng].map((circle, index) => (
             <div className="circle-cmp app__flex" key={`circle-${index}`}>
               <img src={circle} alt="profile_bg" />
             </div>

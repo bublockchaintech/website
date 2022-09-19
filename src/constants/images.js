@@ -30,6 +30,7 @@ import etkinkampusPng from "../assets/etkinkampus.png";
 import fullseppPng from "../assets/fullsepp.png";
 import kriptomedaPng from "../assets/kriptomeda.png";
 import patikaDevPng from "../assets/patika.dev.png";
+import uniVeChainPng from "../assets/univechain.png";
 
 export default {
   nft,
@@ -56,4 +57,5 @@ export default {
   etkinkampusPng,
   colinsPng,
   codefictionPng,
+  uniVeChainPng,
 };

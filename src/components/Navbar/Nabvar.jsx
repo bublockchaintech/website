@@ -54,24 +54,18 @@ function Nabvar({ from }) {
           <motion.div whileInView={{ x: [300, 0] }} transition={{ duration: 0.85, ease: "easeOut" }}>
             <HiX onClick={() => setToogle(false)} />
             <ul>
-              {[
-                { display: "anasayfa", link: "home" },
-                { display: "hakkimizda", link: "about" },
-                { display: "ekibimiz", link: "team" },
-                { display: "hedeflerimiz", link: "roadmap" },
-                { display: "partnerliklerimiz", link: "sponsors" },
-                { display: "duyurular", link: "announcements" },
-                { display: "iletisim", link: "contact" },
-              ].map((item) => (
+              {linksArr.map((item) => (
                 <li key={item.link}>
-                  <button
-                    onClick={() => {
-                      setToogle(false);
-                      linkHelper.linkHelperForNavigationBar(item);
-                    }}
-                  >
-                    {item.display}
-                  </button>
+                  <Link to="/">
+                    <button
+                      onClick={() => {
+                        setToogle(false);
+                        linkHelper.linkHelperForNavigationBar(item);
+                      }}
+                    >
+                      {item.display}
+                    </button>
+                  </Link>
                 </li>
               ))}
             </ul>

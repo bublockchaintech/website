@@ -10,106 +10,75 @@ function Announcements() {
   const announcements = [
     {
       id: 1,
-      date: "12 Nisan 2022",
+      date: "21 Şubat",
       works: [
         {
-          id: 11,
-          desc: "Colins ile partnerlik kuruldu.",
+          id: 15,
+          desc: "Blockchain Tech Club kuruldu.",
         },
       ],
     },
     {
       id: 2,
-      date: "20 Mayıs 2022",
+      date: "11 Mayıs",
       works: [
         {
-          id: 12,
-          desc: "Eğitim sponsoru olarak Patika.dev ile partnerlik sağlandı.",
+          id: 11,
+          desc: "Yeni Partnerimiz | Colin's",
         },
       ],
     },
     {
       id: 3,
-      date: "11 Eylül 2022 ",
+      date: "25 Mayıs",
       works: [
         {
-          id: 13,
-          desc: "Codefiction ile eğitim ve mentörlük için partnerlik sağlandı.",
+          id: 11,
+          desc: "Yeni Medya Partnerimiz | Etkin Kampüs",
         },
       ],
     },
     {
       id: 4,
-      date: "11 Eylül 2022",
+      date: "30 Haziran",
       works: [
         {
-          id: 14,
-          desc: "Medya sponsoru olarak FullSepple anlaşıldı.",
+          id: 12,
+          desc: "Yeni Eğitim Partnerimiz | Patika.dev",
         },
       ],
     },
     {
       id: 5,
-      date: "27 Ekim 2022",
+      date: "23 Temmuz",
       works: [
         {
-          id: 15,
-          desc: "Akbank Refi sdfsdfsd katılım sfdasfadsfasağlandı.",
+          id: 14,
+          desc: "Yeni Medya Partnerimiz | FullSepp",
         },
       ],
     },
     {
       id: 6,
-      date: "27 Ekim 2022",
+      date: "8 Ağustos",
       works: [
         {
-          id: 15,
-          desc: "Akbank Refi Hackathonuna katılım sağlandı.",
+          id: 13,
+          desc: "Yeni Partnerimiz | Codefiction",
         },
       ],
     },
     {
       id: 7,
-      date: "27 Ekim 2022",
+      date: "15 Ağustos",
       works: [
         {
           id: 15,
-          desc: "sadasgfhvccatılım gdfg.",
-        },
-      ],
-    },
-    {
-      id: 8,
-      date: "27 Ekim 2022",
-      works: [
-        {
-          id: 15,
-          desc: "werewrewrdf.",
-        },
-      ],
-    },
-    {
-      id: 9,
-      date: "27 Ekim 2022",
-      works: [
-        {
-          id: 15,
-          desc: "hjhjvdfgdgsdfasdf",
-        },
-      ],
-    },
-    {
-      id: 10,
-      date: "27 Ekim 2022",
-      works: [
-        {
-          id: 15,
-          desc: "sdfgfdgwretdfgdfgsdfsdf",
+          desc: "Yeni Partnerimiz | UniVeChain",
         },
       ],
     },
   ];
-
   return (
     <>
       <h2 className="head-text">
@@ -120,11 +89,17 @@ function Announcements() {
         <div className="app__announcements-exp">
           {pathname === "/"
             ? announcements
-                .filter((announcement) => announcement.id <= 5).reverse()
+                .filter((announcement) => announcement.id > announcements.length - 5)
+                .reverse()
                 .map((announcement) => (
                   <motion.div className="app__announcements-exp-item" key={announcement.id}>
                     <div className="app__announcements-exp-year">
-                      <p className="bold-text">{announcement.date}</p>
+                      <p
+                        className="bold-text"
+                        style={pathname === "/duyurular" ? { color: "#ffffff" } : { color: "#313bac" }}
+                      >
+                        {announcement.date}
+                      </p>
                     </div>
                     <motion.div className="app__announcements-exp-works">
                       {announcement.works.map((work) => (
@@ -137,7 +112,7 @@ function Announcements() {
                             data-for={work.desc}
                             key={work.id}
                           >
-                            <h4 className="bold-text bordered">{work.desc}</h4>
+                            <h4 className="bold-text bordered" style={{fontSize: "1.15rem"}}>{work.desc}</h4>
                           </motion.div>
                           {/* <ReactTooltip
                     id={work.name}
@@ -171,7 +146,9 @@ function Announcements() {
                           data-for={work.desc}
                           key={work.id}
                         >
-                          <h4 style={pathname === "/" ? {} : {fontSize: "1.1rem", fontWeight:"bold"}} className="bold-text bordered">{work.desc}</h4>
+                          <h4 style={pathname === "/" ? {} : { fontWeight: "bold" }} className="bold-text bordered">
+                            {work.desc}
+                          </h4>
                         </motion.div>
                         {/* <ReactTooltip
                       id={work.name}

@@ -43,7 +43,7 @@ const Header = () => (
       transition={{ duration: 0.5, delayChildren: 0.5 }}
       className="app__header-img"
     >
-      <img src={images.nftWebSaydam} alt="profile_bg" />
+      <img src={images.profile} alt="profile_bg" />
       {/* <motion.img id="motion"
         whileInView={{ scale: [0, 1] }}
         transition={{ duration: 1, ease: "easeInOut" }}
@@ -53,11 +53,7 @@ const Header = () => (
       /> */}
     </motion.div>
 
-    <motion.div
-      variants={scaleVariants}
-      whileInView={scaleVariants.whileInView}
-      className="app__header-circles"
-    >
+    <motion.div variants={scaleVariants} whileInView={scaleVariants.whileInView} className="app__header-circles">
       {[images.web3, images.blokchain, images.nft].map((circle, index) => (
         <div className="circle-cmp app__flex" key={`circle-${index}`}>
           <img src={circle} alt="profile_bg" />
@@ -67,8 +63,4 @@ const Header = () => (
   </div>
 );
 
-export default AppWrap(
-  MotionWrap(Header, "app__header"),
-  "home",
-  "app__whitebg"
-);
+export default AppWrap(MotionWrap(Header, "app__header"), "home", "app__whitebg");

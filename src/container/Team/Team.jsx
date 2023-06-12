@@ -10,11 +10,12 @@ import "./Team.scss";
 function Team() {
   const [activeFilter, setActiveFilter] = useState("Tümü");
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
-  const [teams, setTeams] = useState([
+  const [teams] = useState([
     {
       name: "Selçuk Şen",
       imgUrl: images.about01,
-      socialLink: "https://www.linkedin.com/in/selcuksen/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=tr",
+      socialLink:
+        "https://www.linkedin.com/in/selcuksen/?original_referer=https%3A%2F%2Fwww%2Egoogle%2Ecom%2F&originalSubdomain=tr",
       title: "Selçuk Şen",
       tags: ["Co-Founder", "Mentör"],
       description: "",
@@ -124,19 +125,11 @@ function Team() {
       </h2>
 
       <div className="app__team-filter">
-        {[
-          "Co-Founder",
-          "Management Team",
-          "Developer",
-          "Mentör",
-          "Tümü",
-        ].map((item, index) => (
+        {["Co-Founder", "Management Team", "Developer", "Mentör", "Tümü"].map((item, index) => (
           <div
             key={index}
             onClick={() => handleTeamFilter(item)}
-            className={`app__team-filter-item app__flex p-text ${
-              activeFilter === item ? "item-active" : ""
-            }`}
+            className={`app__team-filter-item app__flex p-text ${activeFilter === item ? "item-active" : ""}`}
           >
             {item}
           </div>

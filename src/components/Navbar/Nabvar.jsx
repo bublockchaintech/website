@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 import "./Navbar.scss";
 import { images } from "../../constants";
-import linkHelper from "../../helper/helper";
+import { linkHelperForNavigationBar } from "../../helper/helper";
 
 function Nabvar({ from }) {
   const [toogle, setToogle] = useState(false);
@@ -38,7 +38,7 @@ function Nabvar({ from }) {
             <Link to="/">
               <button
                 onClick={() => {
-                  linkHelper.linkHelperForNavigationBar(item);
+                  linkHelperForNavigationBar(item);
                 }}
               >
                 {item.display}
@@ -60,7 +60,7 @@ function Nabvar({ from }) {
                     <button
                       onClick={() => {
                         setToogle(false);
-                        linkHelper.linkHelperForNavigationBar(item);
+                        linkHelperForNavigationBar(item);
                       }}
                     >
                       {item.display}

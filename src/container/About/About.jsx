@@ -6,7 +6,7 @@ import { AppWrap, MotionWrap } from "../../wrapper";
 import "./About.scss";
 
 function About() {
-  const [abouts, setAbouts] = useState([
+  const [abouts] = useState([
     {
       title: "Vizyon",
       descripton:
@@ -57,8 +57,4 @@ function About() {
   );
 }
 
-export default AppWrap(
-  MotionWrap(About, "app__about"),
-  "about",
-  "app__whitebg"
-);
+export default AppWrap(MotionWrap(About, "app__about"), "about", "app__whitebg");

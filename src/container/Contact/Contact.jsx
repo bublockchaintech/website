@@ -1,5 +1,5 @@
 import { send } from "emailjs-com";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 
 import { images } from "../../constants";
 import { AppWrapV2, MotionWrap } from "../../wrapper";
@@ -18,12 +18,6 @@ const Contact = () => {
 
   const { username, email, message } = formData;
 
-  useEffect(() => {
-    if (!(username === "" && email === "" && message === "")) {
-      setBlankField(false);
-    }
-  }, [formData]);
-
   const sendEmail = (e) => {
     e.preventDefault();
     if (!(username === "" || email === "" || message === "")) {
@@ -32,7 +26,7 @@ const Contact = () => {
       send("service_es1y7ur", "template_hiw8xpr", formData, "XdAKsxFytxwHq0-oS")
         .then((response) => {
           console.log("SUCCESS!", response.status, response.text);
-          setFormData({username: "", email: "", message: ""});
+          setFormData({ username: "", email: "", message: "" });
         })
         .catch((err) => {
           console.error("FAILED!", err);
@@ -112,7 +106,7 @@ const Contact = () => {
               onChange={handleChangeInput}
             />
           </div>
-          <p style={{"color": "red"}}>{blankField ? ("Tüm alanları doldurun"): ""}</p>
+          <p style={{ color: "red" }}>{blankField ? "Tüm alanları doldurun" : ""}</p>
           <button type="submit" className="p-text">
             {!loading ? "Bize Mesaj Gönderin" : "Gönderiliyor..."}
           </button>
@@ -126,8 +120,4 @@ const Contact = () => {
   );
 };
 
-export default AppWrapV2(
-  MotionWrap(Contact, "app__contact"),
-  "contact",
-  "app__whitebg"
-);
+export default AppWrapV2(MotionWrap(Contact, "app__contact"), "contact", "app__whitebg");

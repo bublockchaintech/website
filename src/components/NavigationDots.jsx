@@ -1,5 +1,5 @@
 import React from "react";
-import linkHelper from "../helper/helper";
+import { linkHelperForNavigationDots } from "../helper/helper";
 
 function NavigationDots({ active }) {
   return (
@@ -8,7 +8,7 @@ function NavigationDots({ active }) {
         (item, index) => (
           // eslint-disable-next-line jsx-a11y/anchor-has-content
           <button
-            onClick={() => linkHelper.linkHelperForNavigationDots(item)}
+            onClick={() => linkHelperForNavigationDots(item)}
             key={item + index}
             className="app__navigation-dot"
             style={active === item ? { backgroundColor: "#313BAC" } : {}}

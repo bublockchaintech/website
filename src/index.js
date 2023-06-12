@@ -7,7 +7,7 @@ import AnnouncementsPage from "./pages/AnnouncementsPage";
 
 import "./index.css";
 
-const paginationArr = ["app","announcements"];
+const paginationArr = ["app", "announcements"];
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

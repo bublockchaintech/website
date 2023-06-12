@@ -1,9 +1,7 @@
-const linkHelperForNavigationBar = (item) => {
+export const linkHelperForNavigationBar = (item) => {
   document.getElementById(item.link).scrollIntoView();
 };
 
-const linkHelperForNavigationDots = (item) => {
+export const linkHelperForNavigationDots = (item) => {
   document.getElementById(item).scrollIntoView();
 };
-
-export default { linkHelperForNavigationBar, linkHelperForNavigationDots };

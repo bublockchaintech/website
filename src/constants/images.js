@@ -44,7 +44,6 @@ export default {
   circle,
   logo,
   logosvg,
-  nftWebSaydam,
   vizyon,
   misyon,
   proje,

@@ -20,8 +20,7 @@ function RoadMap() {
         {
           id: 11,
           name: "Kuruluş",
-          company:
-            "Beykent Üniversitesi bünyesi içerisinde 2022 yılında kurulduk.",
+          company: "Beykent Üniversitesi bünyesi içerisinde 2022 yılında kurulduk.",
           desc: ".",
         },
       ],
@@ -44,8 +43,7 @@ function RoadMap() {
         {
           id: 13,
           name: "Blockchain Alanında Çeşitli Projeler",
-          company:
-            "Blockchain alanında çeşitli projeler yaparak topluluğumuza bu projeleri kazandırmayı hedefliyoruz.",
+          company: "Blockchain alanında çeşitli projeler yaparak topluluğumuza bu projeleri kazandırmayı hedefliyoruz.",
           desc: "blabla",
         },
       ],
@@ -68,8 +66,7 @@ function RoadMap() {
         {
           id: 15,
           name: "Sektöre Danışmanlık Sağlamak",
-          company:
-            "	Birlikte büyüyüp gelişerek zamanla topluluğumuzu sektöre danışman olarak kazandırmak istiyoruz",
+          company: "	Birlikte büyüyüp gelişerek zamanla topluluğumuzu sektöre danışman olarak kazandırmak istiyoruz",
           desc: "blabla",
         },
       ],
@@ -84,7 +81,7 @@ function RoadMap() {
 
       <div className="app__skills-container">
         <motion.div className="app__skills-list">
-          <img src={images.nftWebSaydam} alt="profile_bg" />
+          <img src={images.profile} alt="profile_bg" />
 
           {/* {skills.map((skill) => (
             <motion.div
@@ -112,7 +109,7 @@ function RoadMap() {
               <motion.div className="app__skills-exp-works">
                 {experience.works.map((work) => (
                   <>
-                    <motion.div 
+                    <motion.div
                       whileInView={{ opacity: [0, 1] }}
                       transition={{ duration: 0.5 }}
                       className="app__skills-exp-work"
@@ -142,8 +139,4 @@ function RoadMap() {
   );
 }
 
-export default AppWrap(
-  MotionWrap(RoadMap, "app__roadmap"),
-  "roadmap",
-  "app__whitebg"
-);
+export default AppWrap(MotionWrap(RoadMap, "app__roadmap"), "roadmap", "app__whitebg");

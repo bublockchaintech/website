@@ -17,8 +17,6 @@ import nft from "../assets/nft.png";
 import blokchain from "../assets/blokchain.png";
 import web3 from "../assets/web3.0.png";
 
-import nftWebSaydam from "../assets/NFTWEBs.gif";
-
 import vizyon from "../assets/vizyon.jpg";
 import misyon from "../assets/misyon.jpg";
 import proje from "../assets/proje.jpg";
